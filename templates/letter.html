@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Letter Submission</title>
+	<link rel="stylesheet"  href="letter.css">
+</head>
+<body>
+    <h1>Letter Submission</h1>
+    <form method="POST" action="/letters/">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br>
+        <label for="body">Body:</label>
+        <textarea id="body" name="body" rows="10" cols="50" required></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
