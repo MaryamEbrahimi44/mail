@@ -11,7 +11,6 @@ def send_new_letters():
     four_hours_ago = now - datetime.timedelta(hours=4)
     letters = db.query(Letter).filter(Letter.created_at >= four_hours_ago).all()
     for letter in letters:
-        sender = letter.sender
         subject = letter.subject
         body = letter.body 
         receiver = db.query(User.email).join(Letter, User.work_subject == Letter.subject).all()
